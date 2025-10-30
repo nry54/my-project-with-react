@@ -5,6 +5,7 @@ import Resume from "../views/Resume";
 import Portfolio from "../views/Portfolio";
 import Services from "../views/Services";
 import Contact from "../views/Contact";
+import WebSites from "../views/WebSites";
 
 const Router = () => {
   const routes = useRoutes([
@@ -12,7 +13,17 @@ const Router = () => {
     { path: "/about", element: <About /> },
     { path: "/resume", element: <Resume /> },
     { path: "/portfolio", element: <Portfolio /> },
-    { path: "/services", element: <Services /> },
+    {
+      path: "/services",
+      element: <Services />,
+      children: [
+        { index: true, element: <Navigate to="web-sites" /> },
+        {
+          path: "web-sites",
+          element: <WebSites />,
+        },
+      ],
+    },
     { path: "/contact", element: <Contact /> },
     { path: "*", element: <Navigate to="/" /> },
   ]);

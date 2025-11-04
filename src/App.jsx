@@ -5,24 +5,15 @@ import "./App.css";
 function App() {
   return (
     <>
-      <nav>
+      <header>
         <NavLink to="/">Ana Sayfa</NavLink>
-      </nav>
-      <nav>
         <NavLink to="/about">About</NavLink>
-      </nav>
-      <nav>
         <NavLink to="/resume">Resume</NavLink>
-      </nav>
-      <nav>
         <NavLink to="/portfolio">Portfolio</NavLink>
-      </nav>
-      <nav>
         <NavLink to="/services">Services</NavLink>
-      </nav>
-      <nav>
         <NavLink to="/contact">Contact</NavLink>
-      </nav>
+      </header>
+      <footer>footer bölümü</footer>
       <Router />
     </>
   );

@@ -1,8 +1,43 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  /* margin: 0 auto;
+  padding: 2rem; */
   text-align: center;
+}
+
+/* Sidebar'ın ve İçeriğin tüm ekranı dikey olarak kaplaması için */
+.full-height-row {
+  /* Tarayıcı penceresinin dikey yüksekliğinin %100'ü */
+  min-height: 100vh; 
+  /* Sayfanın kenarındaki varsayılan boşluğu kaldırır */
+  margin-left: 0; 
+  margin-right: 0;
+}
+
+/* Container'ın yatay boşluklarını kaldır (menüyü tam kenara dayamak için) */
+.container-fluid-zero-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Sidebar Sütunu */
+.sidebar-col {
+  background-color: var(--bs-info-text-emphasis);
+  min-height: 100vh; 
+  padding-top: 1.5rem; /* Üstten biraz boşluk bırak */
+  width: 250px; /* Sabit genişlik */
+  position: fixed; /* Sabit konum */
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto; /* Dikey kaydırma */
+}
+
+/* İçerik Sütunu */
+.content-col {
+  /* Use higher specificity instead of !important */
+  padding: 3rem;
+  margin-left: 250px; /* Sidebar genişliği kadar boşluk */
 }
 
 .logo {

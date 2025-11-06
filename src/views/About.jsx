@@ -1,5 +1,6 @@
+// import { Col } from "react-bootstrap";
 const About = () => {
-  return <div>About</div>;
+  return <></>;
 };
 
 export default About;

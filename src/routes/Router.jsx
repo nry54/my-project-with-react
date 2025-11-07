@@ -1,6 +1,6 @@
 import { useRoutes, Navigate } from "react-router";
 import Home from "../views/Home";
-import About from "../views/Home";
+import About from "../views/About";
 import Resume from "../views/Resume";
 import Portfolio from "../views/Portfolio";
 import Services from "../views/Services";

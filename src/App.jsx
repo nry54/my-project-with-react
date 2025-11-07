@@ -1,5 +1,6 @@
+import Router from "./routes/Router";
 import { Col, Nav } from "react-bootstrap";
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./App.css";
 
 function App() {
@@ -31,27 +32,7 @@ function App() {
         </Nav>
       </Col>
       <Col sm={9} className="content-col">
-        <Routes>
-          {/* Ana Sayfa İçeriği */}
-          <Route path="/" element={<h2>Ana Sayfa İçeriği: Hoş Geldiniz!</h2>} />
-          <Route
-            path="/about"
-            element={<h2>Hakkımda Sayfası: Benim Hikayem</h2>}
-          />
-          <Route path="/resume" element={<h2>Resume Sayfası: Deneyimim</h2>} />
-          <Route
-            path="/portfolio"
-            element={<h2>Portfolio Sayfası: Projelerim</h2>}
-          />
-          <Route
-            path="/services"
-            element={<h2>Services Sayfası: Hizmetlerim</h2>}
-          />
-          <Route path="/contact" element={<h2>Contact Sayfası: İletişim</h2>} />
-
-          {/* 404 Sayfası (İsteğe Bağlı) */}
-          <Route path="*" element={<h2>404: Sayfa Bulunamadı</h2>} />
-        </Routes>
+        <Router />
       </Col>
     </>
   );

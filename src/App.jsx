@@ -1,6 +1,7 @@
 import Router from "./routes/Router";
 import { Col, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Avatar from "./components/Avatar";
 import "./App.css";
 
 function App() {
@@ -9,6 +10,9 @@ function App() {
       {/* Sidebar Navigation */}
       {/* 1. Sütun: Menü için */}
       <Col sm={3} className="sidebar-col">
+        <div>
+          <Avatar />
+        </div>
         <Nav defaultActiveKey="/" className="flex-column">
           {/* Nav.Link bileşenleri burada yer alıyor */}
           <Nav.Link as={Link} to="/">

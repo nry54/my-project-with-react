@@ -31,6 +31,8 @@
   top: 0;
   bottom: 0;
   overflow-y: auto; /* Dikey kaydırma */
+  display: grid; /* Grid düzeni */
+  grid-auto-rows: auto; /* Otomatik satır yükseklikleri */
 }
 
 /* İçerik Sütunu */

@@ -13,7 +13,7 @@ function App() {
         <div>
           <Avatar />
         </div>
-        <Nav defaultActiveKey="/" className="flex-column">
+        <Nav defaultActiveKey="/" className="flex-column sidebar-nav">
           {/* Nav.Link bileşenleri burada yer alıyor */}
           <Nav.Link as={Link} to="/">
             Home

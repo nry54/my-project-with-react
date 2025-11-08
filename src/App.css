@@ -33,6 +33,7 @@
   overflow-y: auto; /* Dikey kaydırma */
   display: grid; /* Grid düzeni */
   grid-auto-rows: auto; /* Otomatik satır yükseklikleri */
+  transition: all 0.3s ease; /* Sütundaki tüm özellikler için geçiş etkisi */
 }
 
 /* İçerik Sütunu */

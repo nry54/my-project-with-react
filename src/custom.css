@@ -1,3 +1,39 @@
 .profilePhoto{
     border-radius: 50%;
+    transition: all 0.3s ease; /* Add transition effect */
+}
+
+.profilePhoto:hover {
+    transform: scale(1.05); /* Increase size on hover */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Add shadow on hover */
+}
+
+.sidebar-nav a{
+    color: #d0dbe9;
+    font-size: 20px;
+    font-weight: 250;
+    width: 100%;
+    padding: 15px 10px;
+    white-space: nowrap;
+    transition: 0.3s;
+    border-radius: 5px;
+    margin: 2px 0;
+}
+
+.sidebar-nav a:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding-left: 15px;
+    transform: translateX(5px); /* Add horizontal shift on hover */
+}
+
+.sidebar-nav a:visited {
+    color: #ffffff; /* Maintain original color for visited links */
+}
+
+.sidebar-nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border-left: 4px solid #ffffff;
+    font-weight: bold;
 }

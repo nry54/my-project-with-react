@@ -15,7 +15,7 @@
 }
 
 .sidebar-nav {
-    justify-content: space-around;
+    justify-content: space-evenly; /* Distribute space evenly - all spaces between items are equal */
 }
 
 .sidebar-nav a{

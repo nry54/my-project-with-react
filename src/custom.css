@@ -8,6 +8,16 @@
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Add shadow on hover */
 }
 
+.menu-icon {
+    margin-right: 10px;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.sidebar-nav {
+    justify-content: space-around;
+}
+
 .sidebar-nav a{
     color: #d0dbe9;
     font-size: 20px;
@@ -18,6 +28,8 @@
     transition: 0.3s;
     border-radius: 5px;
     margin: 2px 0;
+    display: flex;
+    align-items: center;
 }
 
 .sidebar-nav a:hover{

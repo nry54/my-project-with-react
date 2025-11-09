@@ -2,6 +2,14 @@ import Router from "./routes/Router";
 import { Col, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "./components/Avatar";
+import {
+  FaHome,
+  FaUser,
+  FaBriefcase,
+  FaFolder,
+  FaCogs,
+  FaEnvelope,
+} from "react-icons/fa";
 import "./App.css";
 
 function App() {
@@ -16,22 +24,22 @@ function App() {
         <Nav defaultActiveKey="/" className="flex-column sidebar-nav">
           {/* Nav.Link bileşenleri burada yer alıyor */}
           <Nav.Link as={Link} to="/">
-            Home
+            <FaHome className="menu-icon" /> Home
           </Nav.Link>
           <Nav.Link as={Link} to="/about">
-            About
+            <FaUser className="menu-icon" /> About
           </Nav.Link>
           <Nav.Link as={Link} to="/resume">
-            Resume
+            <FaBriefcase className="menu-icon" /> Resume
           </Nav.Link>
           <Nav.Link as={Link} to="/portfolio">
-            Portfolio
+            <FaFolder className="menu-icon" /> Portfolio
           </Nav.Link>
           <Nav.Link as={Link} to="/services">
-            Services
+            <FaCogs className="menu-icon" /> Services
           </Nav.Link>
           <Nav.Link as={Link} to="/contact">
-            Contact
+            <FaEnvelope className="menu-icon" /> Contact
           </Nav.Link>
         </Nav>
       </Col>

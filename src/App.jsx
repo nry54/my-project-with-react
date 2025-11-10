@@ -2,6 +2,7 @@ import Router from "./routes/Router";
 import { Col, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "./components/Avatar";
+import Social from "./components/Social";
 import {
   FaHome,
   FaUser,
@@ -20,7 +21,9 @@ function App() {
       <Col sm={3} className="sidebar-col">
         <div>
           <Avatar />
+          <Social />
         </div>
+
         <Nav defaultActiveKey="/" className="flex-column sidebar-nav">
           {/* Nav.Link bileşenleri burada yer alıyor */}
           <Nav.Link as={Link} to="/">

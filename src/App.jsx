@@ -12,46 +12,51 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import "./App.css";
+import { useTheme } from "./hooks/useTheme";
 
 function App() {
+  const { theme } = useTheme();
+
   return (
     <>
-      {/* Sidebar Navigation */}
-      {/* 1. Sütun: Menü için */}
-      <Col sm={3} className="sidebar-col">
-        <div>
-          <Avatar />
+      <div className={`app ${theme}`}>
+        {/* Sidebar Navigation */}
+        {/* 1. Sütun: Menü için */}
+        <Col sm={3} className="sidebar-col">
           <div>
-            <h4 className="sidebar-heading">Nuray Şentürk</h4>
+            <Avatar />
+            <div>
+              <h4 className="sidebar-heading">Nuray Şentürk</h4>
+            </div>
+            <Social />
           </div>
-          <Social />
-        </div>
 
-        <Nav defaultActiveKey="/" className="flex-column sidebar-nav">
-          {/* Nav.Link bileşenleri burada yer alıyor */}
-          <Nav.Link as={Link} to="/">
-            <FaHome className="menu-icon" /> Home
-          </Nav.Link>
-          <Nav.Link as={Link} to="/about">
-            <FaUser className="menu-icon" /> About
-          </Nav.Link>
-          <Nav.Link as={Link} to="/resume">
-            <FaBriefcase className="menu-icon" /> Resume
-          </Nav.Link>
-          <Nav.Link as={Link} to="/portfolio">
-            <FaFolder className="menu-icon" /> Portfolio
-          </Nav.Link>
-          <Nav.Link as={Link} to="/services">
-            <FaCogs className="menu-icon" /> Services
-          </Nav.Link>
-          <Nav.Link as={Link} to="/contact">
-            <FaEnvelope className="menu-icon" /> Contact
-          </Nav.Link>
-        </Nav>
-      </Col>
-      <Col sm={9} className="content-col">
-        <Router />
-      </Col>
+          <Nav defaultActiveKey="/" className="flex-column sidebar-nav">
+            {/* Nav.Link bileşenleri burada yer alıyor */}
+            <Nav.Link as={Link} to="/">
+              <FaHome className="menu-icon" /> Home
+            </Nav.Link>
+            <Nav.Link as={Link} to="/about">
+              <FaUser className="menu-icon" /> About
+            </Nav.Link>
+            <Nav.Link as={Link} to="/resume">
+              <FaBriefcase className="menu-icon" /> Resume
+            </Nav.Link>
+            <Nav.Link as={Link} to="/portfolio">
+              <FaFolder className="menu-icon" /> Portfolio
+            </Nav.Link>
+            <Nav.Link as={Link} to="/services">
+              <FaCogs className="menu-icon" /> Services
+            </Nav.Link>
+            <Nav.Link as={Link} to="/contact">
+              <FaEnvelope className="menu-icon" /> Contact
+            </Nav.Link>
+          </Nav>
+        </Col>
+        <Col sm={9} className="content-col">
+          <Router />
+        </Col>
+      </div>
     </>
   );
 }

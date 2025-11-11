@@ -2,10 +2,16 @@
     justify-content: space-evenly; /* Distribute space evenly - all spaces between items are equal */
 }
 
-.profilePhoto{
-    border-radius: 50%;
-    transition: all 0.3s ease; /* Add transition effect */
+.profilePhoto {
+  width: 150px; /* İstediğiniz boyut */
+  height: 150px; /* İstediğiniz boyut */
+  margin: auto;
+  background-image: url('./assets/images/profilePhoto.jpg');
+  background-size: cover;
+  border-radius: 50%;
+  transition: all 0.3s ease; /* Add transition effect */
 }
+
 
 .profilePhoto:hover {
     transform: scale(1.05); /* Increase size on hover */

@@ -6,6 +6,7 @@
   width: 150px; /* İstediğiniz boyut */
   height: 150px; /* İstediğiniz boyut */
   margin: auto;
+  border: 5px solid rgba(0, 0, 0, 2);
   background-image: url('./assets/images/profilePhoto.jpg');
   background-size: cover;
   border-radius: 50%;

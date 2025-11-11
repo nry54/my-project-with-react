@@ -21,6 +21,9 @@ function App() {
       <Col sm={3} className="sidebar-col">
         <div>
           <Avatar />
+          <div>
+            <h4 className="sidebar-heading">Nuray Şentürk</h4>
+          </div>
           <Social />
         </div>
 

@@ -3,6 +3,7 @@ import { Col, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "./components/Avatar";
 import Social from "./components/Social";
+import Weather from "./components/Weather";
 import {
   FaHome,
   FaUser,
@@ -19,7 +20,8 @@ function App() {
 
   return (
     <>
-      <div className={`app ${theme}`}>
+      <div className={`app theme-${theme}`}>
+        <Weather />
         {/* Sidebar Navigation */}
         {/* 1. Sütun: Menü için */}
         <Col sm={3} className="sidebar-col">

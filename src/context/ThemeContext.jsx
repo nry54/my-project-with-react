@@ -6,7 +6,7 @@ const ThemeContext = createContext(); /* Context Nesnesini Oluşturduk */
 
 /** Provider Bileşenini (Veriyi Sağlayan) Oluşturduk  */
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "sunny");
   const [weatherData, setWeatherData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -28,6 +28,40 @@ export const ThemeProvider = ({ children }) => {
         }
       );
     });
+  };
+
+  // Determine theme based on weather conditions
+  const getWeatherBasedTheme = (weather) => {
+    if (!weather || !weather.current) return "sunny";
+
+    const condition = weather.current.condition.text.toLowerCase();
+    const isDay = weather.current.is_day === 1;
+
+    // Night time theme
+    if (!isDay) return "night";
+
+    // Sunny/clear weather
+    if (condition.includes("sunny") || condition.includes("clear"))
+      return "sunny";
+
+    // Cloudy weather
+    if (condition.includes("cloudy") || condition.includes("overcast"))
+      return "cloudy";
+
+    // Rainy weather
+    if (condition.includes("rain") || condition.includes("drizzle"))
+      return "rainy";
+
+    // Snowy weather
+    if (condition.includes("snow") || condition.includes("blizzard"))
+      return "snowy";
+
+    // Stormy weather
+    if (condition.includes("thunder") || condition.includes("storm"))
+      return "stormy";
+
+    // Default theme
+    return "sunny";
   };
 
   useEffect(() => {
@@ -53,6 +87,10 @@ export const ThemeProvider = ({ children }) => {
         const data = await response.json();
         console.log(data);
         setWeatherData(data);
+
+        // Set theme based on weather data only
+        const weatherTheme = getWeatherBasedTheme(data);
+        setTheme(weatherTheme);
       } catch (error) {
         console.error("Error fetching weather data:", error);
         setError(error.message);
@@ -63,6 +101,10 @@ export const ThemeProvider = ({ children }) => {
           );
           const fallbackData = await fallbackResponse.json();
           setWeatherData(fallbackData);
+
+          // Set theme based on weather data
+          const weatherTheme = getWeatherBasedTheme(fallbackData);
+          setTheme(weatherTheme);
         } catch (fallbackError) {
           console.error("Error fetching fallback weather data:", fallbackError);
         }
@@ -77,9 +119,19 @@ export const ThemeProvider = ({ children }) => {
   /** Kullanıcının seçimi local storage'a kaydedilir - // Hem başlangıçta (mount) hem de 'theme' değeri her değiştiğinde çalışır.  */
   useEffect(() => {
     localStorage.setItem("theme", theme);
+
+    // Apply theme to body class for background styling
+    document.body.className = `theme-${theme}`;
   }, [theme]);
 
-  const values = { theme, setTheme, weatherData, loading, error };
+  const values = {
+    theme,
+    setTheme,
+    weatherData,
+    loading,
+    error,
+  };
+
   return (
     <ThemeContext.Provider value={values}>{children}</ThemeContext.Provider>
   );

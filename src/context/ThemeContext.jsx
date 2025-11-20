@@ -49,7 +49,11 @@ export const ThemeProvider = ({ children }) => {
       return "cloudy";
 
     // Rainy weather
-    if (condition.includes("rain") || condition.includes("drizzle"))
+    if (
+      condition.includes("rain") ||
+      condition.includes("drizzle") ||
+      condition.includes("sleet")
+    )
       return "rainy";
 
     // Snowy weather

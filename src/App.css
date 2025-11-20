@@ -104,7 +104,6 @@
 .app.theme-sunny {
   background: linear-gradient(135deg, #ff9a9e, #fad0c4);
   background-image: url('src/assets/images/weather/sunny.avif');
-  background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
   color: #333;
@@ -120,7 +119,6 @@
 .app.theme-cloudy {
   background: linear-gradient(135deg, #d4fc79, #96e6a1);
   background-image: url('./assets/images/weather/partly-cloudly.jpg');
-  background-blend-mode: overlay;
   background-size: cover; /* Ensures that the element fills both its width and height while maintaining the aspect ratio */
   color: #333;
   min-height: 100vh;
@@ -134,7 +132,6 @@
 .app.theme-rainy {
   background: linear-gradient(135deg, #a8edea, #fed6e3);
   background-image: url('src/assets/images/weather/rainy.avif');
-  background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
   color: #333;
@@ -150,7 +147,6 @@
 .app.theme-snowy {
   background: linear-gradient(135deg, #c9d6ff, #e2e9ff);
   background-image: url('src/assets/images/weather/snowy.avif');
-  background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
   color: #333;
@@ -166,7 +162,6 @@
 .app.theme-stormy {
   background: linear-gradient(135deg, #6a6a6a, #9e9e9e);
   background-image: url('src/assets/images/weather/stormy.avif');
-  background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -182,7 +177,6 @@
 .app.theme-night {
   background: linear-gradient(135deg, #2c3e50, #4a6491);
   background-image: url('src/assets/images/weather/night.avif');
-  background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
   color: #fff;

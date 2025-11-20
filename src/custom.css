@@ -264,7 +264,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--bs-border-color-translucent);; 
+  background: linear-gradient(135deg, #2c3e50, #cccfd3);
   z-index: -1;
 }
 

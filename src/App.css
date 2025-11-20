@@ -22,7 +22,7 @@
 
 /* Sidebar Sütunu */
 .sidebar-col {
-  background-color: var(--bs-info-text-emphasis);
+  background: linear-gradient(135deg, #2c3e50, #34495e);
   min-height: 100vh; 
   padding-top: 1.5rem; /* Üstten biraz boşluk bırak */
   width: 250px; /* Sabit genişlik */
@@ -34,6 +34,7 @@
   display: grid; /* Grid düzeni */
   grid-auto-rows: auto; /* Otomatik satır yükseklikleri */
   transition: all 0.3s ease; /* Sütundaki tüm özellikler için geçiş etkisi */
+  box-shadow: 3px 0 15px rgba(0, 0, 0, 0.2); /* Sütunun etrafında gölge */
 }
 
 /* İçerik Sütunu */
@@ -50,31 +51,36 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #3498db);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #2c3e50);
 }
 
 .section {
   text-align: justify;
+  max-width: 800px;
+  margin: 0 auto;
 }
+
 .sectionTitle {
-  font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    position: relative;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #2c3e50;
 }
 
 .sectionTitle::after {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 2px;
+  width: 100px;
+  height: 3px;
   bottom: 0;
   left: 0;
-  background: var(--bs-info);
+  background: linear-gradient(90deg, #3498db, #2c3e50);
+  border-radius: 2px; /* Kenar yuvarlaması */
 }
 
 @keyframes logo-spin {
@@ -94,10 +100,15 @@
 
 .card {
   padding: 2em;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .read-the-docs {
-  color: #888;
+  color: #7f8c8d;
 }
 
 /* Weather-based app styles with background images */

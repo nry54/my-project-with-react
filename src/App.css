@@ -98,19 +98,6 @@
   }
 }
 
-.card {
-  padding: 2em;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  margin-bottom: 2rem;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.read-the-docs {
-  color: #7f8c8d;
-}
-
 /* Weather-based app styles with background images */
 .app.theme-sunny {
   background: linear-gradient(135deg, #ff9a9e, #fad0c4);

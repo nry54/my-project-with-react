@@ -6,7 +6,7 @@ const ThemeContext = createContext(); /* Context Nesnesini Oluşturduk */
 
 /** Provider Bileşenini (Veriyi Sağlayan) Oluşturduk  */
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "sunny");
+  const [theme, setTheme] = useState("sunny");
   const [weatherData, setWeatherData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -116,10 +116,8 @@ export const ThemeProvider = ({ children }) => {
     fetchWeatherData();
   }, []);
 
-  /** Kullanıcının seçimi local storage'a kaydedilir - // Hem başlangıçta (mount) hem de 'theme' değeri her değiştiğinde çalışır.  */
+  /** Hem başlangıçta (mount) hem de 'theme' değeri her değiştiğinde çalışır.  */
   useEffect(() => {
-    localStorage.setItem("theme", theme);
-
     // Apply theme to body class for background styling
     document.body.className = `theme-${theme}`;
   }, [theme]);

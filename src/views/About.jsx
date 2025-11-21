@@ -13,41 +13,34 @@ const About = () => {
 
         <div className="about-details">
           <h3>Professional Skills</h3>
-          <ul>
-            <li>
-              Full Stack Development with{" "}
-              <span className="badge text-bg-secondary">Vue.js</span> and{" "}
-              <span className="badge text-bg-secondary">PHP</span>
-            </li>
-            <li>
-              Frontend Frameworks:{" "}
-              <span className="badge text-bg-secondary">React</span>
-              <span className="badge text-bg-secondary"> Vue.js</span>
-            </li>
-            <li>
-              Backend Technologies:{" "}
-              <span className="badge text-bg-secondary">PHP</span>{" "}
-              <span className="badge text-bg-secondary">C#</span>
-            </li>
-            <li>
-              Database Management:{" "}
-              <span className="badge text-bg-secondary">MySQL</span>{" "}
-              <span className="badge text-bg-secondary">MongoDB</span>
-            </li>
-            <li>
-              Cloud Technologies:{" "}
-              <span className="badge text-bg-secondary">AWS</span>{" "}
-              <span className="badge text-bg-secondary">Docker</span>
-            </li>
-            <li>
-              <span className="badge text-bg-secondary">
-                UI/UX Design Principles
-              </span>
+          <ul className="skills-list">
+            <li className="skill-item">
+              <span className="skill-badge">Vue.js</span>
+              <span className="skill-badge">PHP</span>
+              <span className="skill-badge">Laravel</span>
+              <span className="skill-badge">Phalcon</span>
+              <span className="skill-badge">React</span>
+              <span className="skill-badge">JavaScript</span>
+              <span className="skill-badge">HTML</span>
+              <span className="skill-badge">CSS</span>
+              <span className="skill-badge">MySQL</span>
+              <span className="skill-badge">AWS S3</span>
+              <span className="skill-badge">UI/UX Design</span>
+              <span className="skill-badge">Git</span>
+              <span className="skill-badge">Cypress</span>
+              <span className="skill-badge">API Integrations</span>
+              <span className="skill-badge">.NET Core</span>
+              <span className="skill-badge">.NET</span>
+              <span className="skill-badge">Clean Code Principles</span>
+              <span className="skill-badge">Component-Based Architecture</span>
+              <span className="skill-badge">Gemini</span>
+              <span className="skill-badge">Cursor</span>
+              <span className="skill-badge">SDLC</span>
+              <span className="skill-badge">Agile Methodologies</span>
+              <span className="skill-badge">Scrum</span>
             </li>
           </ul>
         </div>
-
-        <p>Email: nuray.senturk54@gmail.com</p>
       </section>
     </>
   );

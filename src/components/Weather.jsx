@@ -3,6 +3,11 @@ import { useTheme } from "../hooks/useTheme";
 const ThemeSwitcher = () => {
   const { weatherData } = useTheme();
 
+  const isDay = () => {
+    if (!weatherData || !weatherData.current) return false;
+    return weatherData.current.is_day === 1;
+  };
+
   // Get weather condition text from weather data
   const getWeatherCondition = () => {
     if (!weatherData || !weatherData.current) return "Unknown";
@@ -32,7 +37,9 @@ const ThemeSwitcher = () => {
       )}
 
       <p className="location">{getLocation()}</p>
-      <p className="weather-condition">{getWeatherCondition()}</p>
+      <p className="weather-condition">
+        {isDay() ? getWeatherCondition() : "Night"}
+      </p>
     </div>
   );
 };

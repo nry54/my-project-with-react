@@ -56,7 +56,9 @@ function App() {
           </Nav>
         </Col>
         <Col sm={9} className="content-col">
-          <Router />
+          <div className="home-container">
+            <Router />
+          </div>
         </Col>
       </div>
     </>

@@ -8,7 +8,7 @@ const About = () => {
           Vue.js and PHP. I have developed software for artificial intelligence,
           medicine, Cloud ERP, and educational systems. I am currently deepening
           my knowledge in front-end development and am in the process of
-          learning React. I prioritize clean, responsive, and UI/UX design.
+          learning React. I important clean, responsive, and UI/UX design.
         </p>
       </section>
     </>

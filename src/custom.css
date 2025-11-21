@@ -328,6 +328,10 @@
   color: #3498db;
 }
 
+.badge {
+  --bs-badge-font-size: 5;
+}
+
 @keyframes blink {
   0% { opacity: 1; }
   50% { opacity: 0; }
